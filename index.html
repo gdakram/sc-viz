@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="app.css"/>
     </head>
     <body>
+        <a href="https://github.com/gdakram/sc-viz" target="_blank" id="fork">
+            <img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+        </a>
+        
         <!--input-->
         <input id="url" value="https://soundcloud.com/neus/pharrell-williams-happy-neus" placeholder="Enter a SoundCloud URL. Ex: https://soundcloud.com/neus/pharrell-williams-happy-neus"/>
         <button id="load-song">Load</button>
@@ -15,7 +19,10 @@
         
         <!--art-->
         <!--<canvas id="canvas" style="width:1000px;height:1000px;display:block;"></canvas>-->
-        <canvas id="canvas" width="100%" height="500px"></canvas>
+        <div id="canvas-container">
+            <canvas id="canvas" width="100%" height="500px"></canvas>
+        </div>
+        
 
         <!--attribution-->
         <a href="http://soundcloud.com/" id="soundcloud-attribution" target="_blank">

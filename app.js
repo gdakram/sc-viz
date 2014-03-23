@@ -159,7 +159,8 @@ if (! window.AudioContext) {
 
         this.drawCirle = function(array) {
             var anglePerSlice = 360 / array.length;
-            var angle = -220;
+            var angle = 0;
+
             for (var i = 0; i < array.length; i++) {
               var value = array[i];
               canvasCtx.beginPath();

@@ -1,13 +1,31 @@
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 body {
   position: relative; }
   body * {
     font-family: Raleway, sans-serif;
     box-sizing: border-box; }
-  body canvas#canvas {
+  body div#canvas-container {
     display: block;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     margin: 0 auto; }
+    body div#canvas-container canvas#canvas {
+      display: block;
+      -moz-animation: spin 60s linear infinite;
+      -webkit-animation: spin 60s linear infinite;
+      animation: spin 60s linear infinite; }
   body input#url {
     position: absolute;
     left: 50%;
@@ -69,4 +87,11 @@ body {
       height: 64px;
       border-radius: 32px; }
     body a#soundcloud-artist.active {
-      opacity: 1; }
+      opacity: 0.9; }
+  body a#fork {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+    border: none;
+    display: inline-block; }
