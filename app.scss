@@ -1,0 +1,71 @@
+body {
+    position: relative;
+    * {
+        font-family: Raleway, sans-serif;
+        box-sizing: border-box;
+    }
+    canvas#canvas {
+        display: block;
+        background-color: rgba(0,0,0,0.1); 
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+    input#url {
+        position: absolute; left: 50%; top: 10px; 
+        width: 800px; margin-left: -400px;
+        line-height: 20px; 
+        font-size: 18px;  
+        border: none; border-radius: 5px; 
+        padding: 10px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+    }
+    button#load-song, button#stop-song {        
+        display: block; width: 80px; height: 80px;
+        position: absolute; left: 50%; top: 70px; margin-left: -40px;
+        background-color: rgba(0,0,0,0.7);
+        border: none;
+        color: white;
+        font-size: 18px; line-height: 80px;
+        border-radius: 40px;
+        transition: all ease-in-out 0.5s;
+        z-index: 4;
+        cursor: pointer;
+        &.slide-left {
+            margin-left: -80px;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    button#stop-song {
+        margin-left: 40px;
+        opacity: 0;
+        z-index: 2;
+        &.active {
+            opacity: 1;
+        }
+    }
+    
+    a#soundcloud-attribution {
+        position: absolute; bottom: 10px; left: 50%; margin-left: -32px;
+        transition: all ease-in-out 0.5s;
+        &.slide-left {
+            margin-left: -64px;
+        }
+    }
+    
+    a#soundcloud-artist {
+        position: absolute; bottom: 10px; left: 50%; margin-left: 32px;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+        img {
+            width: 64px; height: 64px; border-radius: 32px;
+        }
+        &.active {
+            opacity: 1;
+        }
+    }
+    
+}

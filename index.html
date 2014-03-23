@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SoundCloud Audio Spectrum Visualizer</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Raleway:100,400i/Open+Sans:400,700"/>
+        <link rel="stylesheet" href="app.css"/>
+    </head>
+    <body>
+        <!--input-->
+        <input id="url" value="https://soundcloud.com/neus/pharrell-williams-happy-neus" placeholder="Enter a SoundCloud URL. Ex: https://soundcloud.com/neus/pharrell-williams-happy-neus"/>
+        <button id="load-song">Load</button>
+        <button id="stop-song">Stop</button>
+        
+        <!--art-->
+        <!--<canvas id="canvas" style="width:1000px;height:1000px;display:block;"></canvas>-->
+        <canvas id="canvas" width="100%" height="500px"></canvas>
+
+        <!--attribution-->
+        <a href="http://soundcloud.com/" id="soundcloud-attribution" target="_blank">
+            <img src="http://developers.soundcloud.com/assets/powered_by_large_black-e832a12f64d6ce6d2da947494e210e4d.png"/>
+        </a>        
+        <a href="" id="soundcloud-artist" target="_blank">
+            <img src=""/>
+        </a>
+        
+        <!--proodle-->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
