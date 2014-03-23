@@ -24,7 +24,7 @@ body {
     }
     
     input#url {
-        position: absolute; left: 50%; top: 10px; 
+        position: absolute; left: 50%; top: 10px; z-index: 5;
         width: 800px; margin-left: -400px;
         line-height: 20px; 
         font-size: 18px;  
