@@ -66,14 +66,18 @@ if (! window.AudioContext) {
 
     // the visualizer class
     function Visualizer(options) {
-        options = options || {
+        // set up the options
+        var defaultOptions = {
             style : 'radial'
             , smoothingTimeConstant: 0.3
             , fftSize: 32
         };
+        this.options = options = $.extend(defaultOptions, options || {});
 
         // initialize the audiocontext
         this.audioContext = new window.AudioContext();
+
+        // the soundcloud resolver object to get the streaming file location
         this.soundCloudResolver = new SoundCloudResolver();
 
         // set up the script processor
@@ -89,7 +93,10 @@ if (! window.AudioContext) {
             canvasCtx.fill();
 
             // draw something..
-            this.drawCirle(data);
+            if (options.style === 'radial') {
+                this.drawCirle(data);
+            }
+
         }, this);
 
         // setup analyzer        
@@ -175,6 +182,6 @@ if (! window.AudioContext) {
           }
         };
     }
-    window.v = new Visualizer().init();
+    window.v = new Visualizer({ style: 'radial' }).init();
 
 }(jQuery));
