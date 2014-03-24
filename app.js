@@ -168,6 +168,9 @@ if (! window.AudioContext) {
               canvasCtx.arc(cx, cy, value + 100, this.toRadians(angle), this.toRadians(angle + anglePerSlice), false);
               canvasCtx.closePath();
               canvasCtx.fill();
+              canvasCtx.lineWidth = 0.1;
+              canvasCtx.strokeStyle = 'yellow';
+              canvasCtx.stroke();
               angle += anglePerSlice;
           }
         };
