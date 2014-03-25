@@ -4,17 +4,19 @@
 
 body {
     position: relative;
+    overflow: hidden;
+
     * {
         font-family: Raleway, sans-serif;
         box-sizing: border-box;
     }
-    
+
     div#canvas-container {
         display: block;
         background-color: rgba(0,0,0,0.1); 
         border-radius: 5px;
         margin: 0 auto;
-        
+
         canvas#canvas {
             display: block;
             -moz-animation: spin 60s linear infinite;

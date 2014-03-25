@@ -12,7 +12,8 @@
     transform: rotate(360deg); } }
 
 body {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   body * {
     font-family: Raleway, sans-serif;
     box-sizing: border-box; }
