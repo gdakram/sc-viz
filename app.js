@@ -26,6 +26,7 @@ if (! window.AudioContext) {
         , radialGradient = canvasCtx.createRadialGradient(cx, cy, 1, cx, cy, 100)
         , defaultUrl = 'https://soundcloud.com/neus/pharrell-williams-happy-neus'
         , SC_CLIENT_ID = '0b09c326bf9fb0340580dde2fae204eb'
+        , SC_PROXY_URL = 'http://sc-viz-proxy.herokuapp.com/stream?url='
     ;
 
     // configure the radial gradient
@@ -127,6 +128,7 @@ if (! window.AudioContext) {
 
         this.streamAudio = function(streamUrl) {
             var request = new XMLHttpRequest(),
+                proxyUrl = SC_PROXY_URL + streamUrl,
                 visualizerContext = this;
 
             // setup buffer source
@@ -140,8 +142,8 @@ if (! window.AudioContext) {
                 alert("Sorry this browser won't work for this. Try a modern browser.");
             }
 
-            // begin binary stream            
-            request.open('GET', streamUrl, true);
+            // begin binary stream
+            request.open('GET', proxyUrl, true);
             request.responseType = 'arraybuffer';
             request.onload = function() {
                 // decode the data
